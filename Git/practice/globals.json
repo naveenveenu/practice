@@ -1,0 +1,7 @@
+{
+	"dbIp": "localhost",
+	"dbName": "practiceDb",
+	"dbPoolSize": 5,
+	"dbUsername": "",
+	"dbPassword": ""
+}

@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="panel panel-danger">
+  <div class="panel-heading">Add Contact</div>
+  <form role="form">
+    <div class="row">
+      <label class="col-xs-1">Name</label>
+      <input type="text" id="inputSuccess" class="col-xs-4" ng-model='name'/>
+    </div>
+    <div class="row">
+      <label class="col-xs-1">Mobile</label>
+      <input type="text" id="inputWarning" class="col-xs-4" ng-model='phone'/>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-xs-2" />
+      <button type="button" class="btn btn-primary col-xs-1" ng-click='submit()'>Submit</button>
+    </div>
+  </form>
+</div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Contact Details
+    </div>
+    <div class="panel-body">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Mobile Number</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat='address in addressBook'>
+              <td>{{address.name}}</td>
+              <td>{{address.phone}}</td>
+              <td><a href="" ng-click="delete(address.name, address.phone)" > <i class="fa fa-times" /> </a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>;

@@ -17,8 +17,9 @@
     //For ng-if
     $scope.editName='';
     $scope.editableIndex='';
-
+    $scope.editPhone='';
     $scope.addressBook = [];
+
     // to fetch from db
     fetchContacts = function(){
       $http.get('/contact/getContacts', {}).then(function(res){
@@ -64,6 +65,7 @@
 
     $scope.setEditable = function(index){
       $scope.editName = true;
+      $scope.editPhone = true;
       $scope.editableIndex = index;
     };
 
@@ -78,6 +80,10 @@
       $scope.editableIndex = -1;
     };
 
-    
+    // $scope.setEditDialog = function(index){
+    //   $scope.editPhone = true;
+    //   $scope.editableIndex = index;
+    // };
+
   }]);
 })();

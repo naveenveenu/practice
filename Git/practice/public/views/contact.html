@@ -38,15 +38,18 @@
                 <!-- When submitted need to show label with edit button-->
                 <div ng-if='editName && $index == editableIndex'>
                   <input type="text" class="col-xs-4" ng-model='address.name'/>
-                  <i class="fa fa-save" ng-click='saveName($index)'/>
+                  <a href=""> <i class="fa fa-save" ng-click='saveName($index)'/> </a>
                   <!-- <a href="" ng-model="editName"> <i class="fa fa-edit" /></a> -->
                 </div>
                 <div ng-if="!editName || $index != editableIndex">
                   {{address.name}}
-                  <i class="fa fa-edit" ng-click='setEditable($index)'/>
+                  <a href="" > <i class="fa fa-edit" ng-click='setEditable($index)'/> </a>
                 </div>
               </td>
-              <td>{{address.phone}}</td>
+              <!-- popup dialog with pre populated phone number and update to database.... -->
+              <td>
+                  {{address.phone}}
+              </td>
               <td><a href="" ng-click="delete(address.userId)" > <i class="fa fa-times" /> </a></td>
             </tr>
           </tbody>
